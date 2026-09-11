@@ -26,28 +26,29 @@ public class lab_1 {
         System.out.printf("| %-8s | %-8s |\n", "x", "y");
         System.out.println("---------------------");
 
-        for(double x = xS2; x <= xE2; x += xStep2){
-            if (x < 5){
+        double x = xS2;
+        while (x <= xE2) {
+            if (x < 5) {
                 double y = 2 * Math.pow(x, 5) + 2 * Math.pow(x, 2);
                 System.out.printf("| %-8s | %-8s |\n", x, y);
-            }
-            else if(x >= 5.0){
-                double y = Math.log10(x + 1 / x + 2);
+            } 
+            else {
+                double y = Math.log10((x + 1) / (x + 2));
                 System.out.printf("| %-8s | %-8s |\n", x, y);
             }
             
+            x += xStep2;
         }
 
       System.out.println("---------------------");
 System.out.println("arr task");
 
-int length = 10;
-int width = 10;
-int[][] arr = new int[length][width];
+int N = 10;
+int[][] arr = new int[N][N];
 
-for (int i = 0; i < length; i++) {
-    for (int j = 0; j < width; j++) {
-        arr[i][j] = (int) (Math.random() * 100);
+for (int i = 0; i < N; i++) {
+    for (int j = 0; j < N; j++) {
+        arr[i][j] = (int) (Math.random() * 100)-50;
         System.out.printf("%-4d", arr[i][j]);
     }
     System.out.println(); 
@@ -55,8 +56,8 @@ for (int i = 0; i < length; i++) {
 
 int maxAboveDiagonal = arr[0][1];
 
-for (int i = 0; i < length; i++) {
-    for (int j = i + 1; j < width; j++) {
+for (int i = 0; i < N; i++) {
+    for (int j = i + 1; j < N; j++) {
         if (arr[i][j] > maxAboveDiagonal) {
             maxAboveDiagonal = arr[i][j];
         }
