@@ -44,7 +44,7 @@ public class lab_2 {
         System.out.println(string3);
 
         System.out.println("Рядки еквівалентні: "
-                + string1.equalsIgnoreCase(string3));
+                + string1.compareTo(string3));
 
 
         // 5. Вибрати з рядка 1 назву інституту
@@ -95,14 +95,14 @@ public class lab_2 {
 
 
         // 10. Додати в кінець рядка місяць народження
-        buffer.append("травень");
+        buffer.append("червень");
 
         System.out.println("\n10. Після додавання місяця:");
         System.out.println(buffer);
 
 
         // 11. Вставити після року стать
-        int yearPosition = buffer.indexOf("2005") + 4;
+        int yearPosition = buffer.indexOf("2008") + 4;
 
         buffer.insert(yearPosition, " Чоловіча");
 
@@ -122,12 +122,10 @@ public class lab_2 {
 
 
         // 13. Скоротити рядок, залишивши прізвище, ім'я та по батькові
-        StringBuffer shortBuffer = new StringBuffer(
-                "Петрів Олексій Олексійович 2005"
-        );
+       StringBuffer shortBuffer = new StringBuffer(
+        "Петрів Олексій Олексійович 2008");
 
-        shortBuffer.delete(shortBuffer.indexOf(" 2005"),
-                shortBuffer.length());
+        shortBuffer.setLength(shortBuffer.indexOf(" 2008"));
 
         System.out.println("\n13. Скорочений рядок:");
         System.out.println(shortBuffer);
