@@ -1,4 +1,4 @@
-public class Duck implements Bird1, Swimmable {
+public class Duck implements SwimmingBird {
     private String name;        
     private int age;            
     protected double swimSpeed; 

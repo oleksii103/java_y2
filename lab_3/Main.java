@@ -20,11 +20,11 @@ public class Main {
 
         System.out.println("\n=== 2. DEMONSTRATION OF SPECIFIC INTERFACES ===");
         
-        // Using Swimmable interface directly
-        Swimmable swimmer = new Duck("Daisy", 2, 6.5);
+        // Using SwimmingBird interface directly
+        SwimmingBird swimmer = new Duck("Daisy", 2, 6.5);
         System.out.println("Swimmer current speed: " + swimmer.getSwimSpeed() + " km/h");
         swimmer.setSwimSpeed(8.0);
-        System.out.print("[Type: Interface Swimmable]: ");
+        System.out.print("[Type: Interface SwimmingBird]: ");
         swimmer.swim();
 
         // Using Flyable interface directly
