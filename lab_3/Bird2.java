@@ -1,50 +1,40 @@
-public abstract class Bird2 {
+public abstract class Bird2 implements Bird1 {
     private String speciesName;
-    private int age;            //lab_4_edited
-    protected double wingSpan;  //lab_4_edited
-    public String habitat;      //lab_4_edited
+    private int age;            
+    protected double wingSpan;  
+    public String habitat;      
 
-    // static field
-    private static int birdCount = 0; //lab_4_edited
+    private static int birdCount = 0; 
 
-    // Instance initializer block
-    {                                 //lab_4_edited
-        this.habitat = "Wild nature";  //lab_4_edited
-    }                                 //lab_4_edited
+    {                                 
+        this.habitat = "Wild nature";  
+    }                                 
 
-    // Constructors
-    public Bird2() {                  //lab_4_edited
-        this("Unknown species", 0, 0.0); //lab_4_edited
-    }                                 //lab_4_edited
+    public Bird2() {                  
+        this("Unknown species", 0, 0.0); 
+    }                                 
 
     public Bird2(String speciesName) {
-        this(speciesName, 0, 0.0);    //lab_4_edited
+        this(speciesName, 0, 0.0);    
     }
 
-    public Bird2(String speciesName, int age, double wingSpan) { //lab_4_edited
-        this.speciesName = speciesName; //lab_4_edited
-        this.age = age;                 //lab_4_edited
-        this.wingSpan = wingSpan;       //lab_4_edited
-        birdCount++;                    //lab_4_edited
-    }                                   //lab_4_edited
+    public Bird2(String speciesName, int age, double wingSpan) { 
+        this.speciesName = speciesName; 
+        this.age = age;                 
+        this.wingSpan = wingSpan;       
+        birdCount++;                    
+    }                                   
 
-    // Access methods (Encapsulation)
-    public String getSpeciesName() {
-        return speciesName;
-    }
+    public String getSpeciesName() { return speciesName; }
+    public void setSpeciesName(String speciesName) { this.speciesName = speciesName; } 
 
-    public void setSpeciesName(String speciesName) { //lab_4_edited
-        this.speciesName = speciesName;             //lab_4_edited
-    }                                               //lab_4_edited
+    public int getAge() { return age; }             
+    public void setAge(int age) { this.age = age; } 
 
-    public int getAge() { return age; }             //lab_4_edited
-    public void setAge(int age) { this.age = age; } //lab_4_edited
+    public double getWingSpan() { return wingSpan; } 
+    public void setWingSpan(double wingSpan) { this.wingSpan = wingSpan; } 
 
-    public double getWingSpan() { return wingSpan; } //lab_4_edited
-    public void setWingSpan(double wingSpan) { this.wingSpan = wingSpan; } //lab_4_edited
-
-    // Static method
-    public static int getBirdCount() { return birdCount; } //lab_4_edited
+    public static int getBirdCount() { return birdCount; } 
 
     public abstract void Eat();
     public abstract void Move();
